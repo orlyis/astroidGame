@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <!-- Nested LinearLayout for hearts -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lives_layout"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/heart1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/heart2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/heart3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Game grid and controls in a nested LinearLayout -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/greed_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/heart1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        tools:ignore="NotSibling">
+
+        <!-- GridLayout for the game -->
+
+
+        <GridLayout
+            android:id="@+id/gameGrid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:columnCount="3"
+            android:rowCount="6"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="40dp"
+
+            android:layout_marginBottom="16dp"
+            android:useDefaultMargins="true"
+            tools:ignore="ExtraText">
+
+            <!-- Add ImageViews for each cell in the grid -->
+            <!-- Asteroid ImageViews in each cell -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell11"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell16"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell17"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cell18"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/player3"
+                android:tag="player"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:visibility="invisible"
+                android:src="@drawable/car" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/player2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:tag="player"
+                android:src="@drawable/car" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/player1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:visibility="invisible"
+                android:tag="player"
+                android:src="@drawable/car" />
+
+
+
+            />
+
+
+        </GridLayout>
+
+
+
+
+        <!-- Horizontal LinearLayout for buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <!-- Button for moving left -->
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#C2ED9D"
+                android:text="left"
+                android:textColor="#000000" />
+
+            <!-- Button for moving right -->
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#C2ED9D"
+                android:text="right"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
